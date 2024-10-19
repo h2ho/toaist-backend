@@ -1,9 +1,6 @@
 package com.taoist.demo.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.UuidGenerator;
@@ -20,14 +17,11 @@ public class User {
     @UuidGenerator(style = UuidGenerator.Style.AUTO)
     @Id
     UUID id;
-
     String username;
-
-
     String password;
     String role;
 
-    @OneToMany
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     List<Inventory> inventories;
 
 }
