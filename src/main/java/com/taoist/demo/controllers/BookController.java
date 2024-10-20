@@ -2,9 +2,7 @@ package com.taoist.demo.controllers;
 
 import com.taoist.demo.dto.BookResponse;
 import com.taoist.demo.dto.BorrowRequest;
-import com.taoist.demo.dto.LoginRequest;
 import com.taoist.demo.entities.Book;
-import com.taoist.demo.exceptions.BadRequestException;
 import com.taoist.demo.exceptions.NotFoundException;
 import com.taoist.demo.services.BookService;
 import com.taoist.demo.services.InventoryService;
@@ -12,7 +10,6 @@ import com.taoist.demo.util.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 

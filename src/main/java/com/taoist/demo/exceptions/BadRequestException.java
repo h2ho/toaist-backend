@@ -1,7 +1,10 @@
 package com.taoist.demo.exceptions;
 
+import lombok.Getter;
+
 import java.util.List;
 
+@Getter
 public class BadRequestException extends RuntimeException {
     private final List<String> errors;
 
@@ -10,7 +13,4 @@ public class BadRequestException extends RuntimeException {
         this.errors = errors;
     }
 
-    public List<String> getErrors() {
-        return errors;
-    }
 }

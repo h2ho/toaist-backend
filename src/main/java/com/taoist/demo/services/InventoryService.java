@@ -2,9 +2,8 @@ package com.taoist.demo.services;
 
 import com.taoist.demo.entities.Inventory;
 import com.taoist.demo.entities.User;
-import com.taoist.demo.exceptions.BookAlreadyBorrowedException;
-import com.taoist.demo.exceptions.NotFoundException;
 import com.taoist.demo.exceptions.BookConflictException;
+import com.taoist.demo.exceptions.NotFoundException;
 import com.taoist.demo.repositories.InventoryRepository;
 import com.taoist.demo.repositories.UserRepository;
 import jakarta.transaction.Transactional;
